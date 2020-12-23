@@ -1,0 +1,68 @@
+BODY {
+	background-image: url("images/zurich1953.png");
+	font-family: Georgia, Bitstream Vera Serif, Times, serif;
+}
+
+#container {
+	width: 60%;
+}
+
+#pad {
+	background-color: #F2E2CE;
+	text-align: left;
+	display: block;
+	border: 2px solid black;
+	padding: 1%;
+	margin: 2%;
+	box-shadow: 5px 5px black;
+}
+
+.post {
+	text-align: justify;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+#title {
+	text-align: left;
+	vertical-align: top;
+	margin-top:0;
+	display: inline-block;
+}
+
+#dropcap {
+	margin-left: 0%;
+	margin-bottom: 0;
+}
+
+.firstcharacter {
+	color: #274030;
+	float: left;
+	font-size: 75px;
+	line-height: 60px;
+	padding-top: 4px;
+	padding-right: 8px;
+	padding-left: 3px;
+}
+
+.post_title {
+
+}
+
+.fancyhr {
+	width: 70%;
+	text-align: center;
+	margin-bottom: 3%;
+	margin-top: 3%;
+}
+
+.author
+{
+	font-style: italic;
+	font-weight: normal;
+	margin-top: -1%;
+}
+
+@media screen and (max-width: 1000px) {
+	#container {width: 95%;}
+}

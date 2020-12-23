@@ -1,0 +1,17 @@
+name: Make Post
+
+on:
+  schedule:
+    - cron: '0 0 */3 * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+    - uses: actions/checkout@v2
+    - name: Create Post
+    run: |-
+      cd programs
+      ./post.sh
