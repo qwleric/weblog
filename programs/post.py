@@ -1,6 +1,7 @@
 import sys
 import os
 import subprocess
+from subprocess import PIPE
 import random
 
 def emplace(htmlfile, anchortag, post):
