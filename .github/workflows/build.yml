@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - name: Create Post
-    - uses: actions/checkout@v2
-    run: |-
+      uses: actions/checkout@v2
+      run: |-
       cd programs
       ./post.sh
