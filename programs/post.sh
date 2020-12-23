@@ -6,6 +6,7 @@ if [ $NUM_QUEUED -gt 0 ]; then
 	# a. if yes, choose random text to post
 	TEXT_TO_POST=$(find ../queued_texts -type f | shuf -n 1)
 	# and move it to texts
+	mkdir ../texts
 	mv "$TEXT_TO_POST" ../texts
 else
 	# b. if not, exit
