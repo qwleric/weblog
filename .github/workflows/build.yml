@@ -12,5 +12,5 @@ jobs:
     - name: Create Post
       uses: actions/checkout@v2
       run: |-
-      cd programs
-      ./post.sh
+        cd programs
+        ./post.sh
