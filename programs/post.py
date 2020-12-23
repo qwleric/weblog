@@ -15,14 +15,15 @@ def emplace(htmlfile, anchortag, post):
 
 
 def synonymize(text):
-	#remember to compile in build chain
-	out = subprocess.run(["./synonymize", text], encoding="UTF-8", capture_output=True)
+	out = subprocess.run(["./synonymize", text], encoding="UTF-8", stdout=PIPE, stderr=PIPE)
+	#out = subprocess.run(["./synonymize", text], encoding="UTF-8", capture_output=True)
 	return out.stdout
 
 def generate_post(FILE):
 	num_paragraphs = str(random.randint(2, 5))
 	paragraph_length = str(random.randint(100, 300))
-	out = subprocess.run(["python3", "markov.py", FILE, paragraph_length, num_paragraphs], encoding="UTF-8", capture_output=True)
+	out = subprocess.run(["python3", "markov.py", FILE, paragraph_length, num_paragraphs], encoding="UTF-8", stdout=PIPE, stderr=PIPE)
+#	out = subprocess.run(["python3", "markov.py", FILE, paragraph_length, num_paragraphs], encoding="UTF-8", capture_output=True)
 	out = out.stdout.replace("\n\n", "<br><br>\n\n")
 
 	paragraphs = out.split("\n\n")
