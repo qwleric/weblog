@@ -9,9 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out repository
-    - uses: actions/checkout@v2
     - name: Create Post
+    - uses: actions/checkout@v2
     run: |-
       cd programs
       ./post.sh
